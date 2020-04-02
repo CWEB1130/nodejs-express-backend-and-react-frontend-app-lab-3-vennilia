@@ -22,7 +22,7 @@ You are going to build a simple web application that allows end-users to create 
 	
 ### Step 3 - Alter Route and Data source
 This step is going to include a route that responds back with offers 
-1.  **Data Source** - Navigate to [lab3 repository] ![#f03c15](https://placehold.it/15/f03c15/000000?text=+) `#f03c15` and add the json file into the backend folder.
+1.  **Data Source** - Navigate to [lab3_resources repository](https://github.com/instructorc/CWEB1130_Lab_Resources/tree/master/lab3_resources) and add the offers.json file into the backend folder.
 
 2.  Navigate to the route folder and open the users.js 
      1.  Include the statement below that makes the offers.json file available within the the users.js file. 
@@ -104,7 +104,7 @@ This step is going to include a route that responds back with offers
 	```
 
 ### Step 6 - Adding the default HTML/CSS and static resources
-1.  Within the frontend folder, replace the contents of the public folder with the public folder found at this URL ![#f03c15](https://placehold.it/15/f03c15/000000?text=+) `#f03c15`
+1.  Within the frontend folder, replace the contents of the public folder with the public folder found at this URL [lab3_resources repository](https://github.com/instructorc/CWEB1130_Lab_Resources/tree/master/lab3_resources)
 	```javascript
 	var fs = require('fs');
 	```
