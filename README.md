@@ -104,10 +104,8 @@ This step is going to include a route that responds back with offers
 	```
 
 ### Step 6 - Adding the default HTML/CSS and static resources
-1.  Within the frontend folder, replace the contents of the public folder with the public folder found at this URL [lab3_resources repository](https://github.com/instructorc/CWEB1130_Lab_Resources/tree/master/lab3_resources)
-	```javascript
-	var fs = require('fs');
-	```
+1.  Within the frontend folder, replace the contents of the public folder with the public folder found at [lab3_resources repository](https://github.com/instructorc/CWEB1130_Lab_Resources/tree/master/lab3_resources)
+
 
 ### Step 7 - End-user Interaction
 1.  Navigate to the backend folder and start the server by running command **[PORT=8080 npm start]**.  Your server should start up with no problems
@@ -129,4 +127,4 @@ This step is going to include a route that responds back with offers
 3.  In Canvas, submit the URL to your repository
 	
 
-#### Github Classroom Invitation URL:
+#### Github Classroom Invitation URL: https://classroom.github.com/a/4Al7g-6s
