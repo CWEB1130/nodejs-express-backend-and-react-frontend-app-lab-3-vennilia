@@ -24,8 +24,8 @@ You are going to build a simple web application that allows end-users to create 
 This step is going to include a route that responds back with offers 
 1.  **Data Source** - Navigate to [lab3_resources repository](https://github.com/instructorc/CWEB1130_Lab_Resources/tree/master/lab3_resources) and add the offers.json file into the backend folder.
 
-2.  Navigate to the route folder and open the users.js 
-     1.  Include the statement below that makes the offers.json file available within the the users.js file. 
+2.  Navigate to the route folder and rename the users.js file to offers.js and complete the following steps below
+     1.  Include the statement below that makes the offers.json file available within the the offers.js file. 
       ```javascript
         var offers = require('../offers.json');
       ```
@@ -34,14 +34,21 @@ This step is going to include a route that responds back with offers
      ```javascript
         res.json(offers)
      ```
-
-3.  Within the terminal, run the command below to change the PORT and start the server.  After running the command below, enter the url to 
+3.  Navigate to the apps.js file locate the following statement **var usersRouter = require('./routes/users');** and change to what is listed below.
+     ```javascript
+        var offersRouter = require('./routes/offers');
+     ```
+4.  Navigate to the apps.js file locate the following statement **app.use('/users', usersRouter);** and change to what is listed below.
+     ```javascript
+        app.use('/offers', offersRouter);
+     ```
+5.  Within the terminal, run the command below to change the PORT and start the server.  After running the command below, enter the url to 
      ```linux
         PORT=8080 npm start
      ```
-4.  Once the server is started, navigate to **URL path** that will trigger the users.js route to display the offers json data.  If you can see the offers.json data once you go to the route, your route is properly configured to send json data.  
+6.  Once the server is started, navigate to **URL path** that will trigger the users.js route to display the offers json data.  If you can see the offers.json data once you go to the route, your route is properly configured to send json data.  
 
-5.  After viewing the route that displays the offer json data, stop application by running **[Control + C]**
+7.  After viewing the route that displays the offer json data, stop application by running **[Control + C]**
 ### Step 4 - Create a React Front-end Framework
 1.  Change directories back into the **[cweb1130_lab3]** root folder.
 
@@ -50,7 +57,7 @@ This step is going to include a route that responds back with offers
         npm install -g create-react-app
         create-react-app frontend
      ```
-3. Change directories into the frontend folder and open the package.json file and include the following line after the scripts object.  The line below adds a proxy key that tells react app to proxy api request to express server.
+3. Change directories into the frontend folder and open the package.json file and include the following line after the scripts object **(DO NOT PUT WITHIN THE SCRIPTS OBJECT)**.  The line below adds a proxy key that tells react app to proxy api request to express server.
      ```json
     "proxy": "http://localhost:8080",
      ```		
@@ -108,7 +115,7 @@ This step is going to include a route that responds back with offers
 
 
 ### Step 7 - End-user Interaction
-1.  Navigate to the backend folder and start the server by running command **[PORT=8080 npm start]**.  Your server should start up with no problems
+1.  Change directories to the backend folder and start the server by running command **[PORT=8080 npm start]**.  Your server should start up with no problems
 2.  While the server for you backend is started, create a new bash terminal within visual studio code by clicking the plus sign. [Please email instructor or watch lecture if you are unable to find]
 3.  With the new bash terminal open, change directories into the frontend folder and start the server by running command **[npm start]**
 4.  If all the steps were properly completed, your app should render and display in the browser.  The offers component should display offers data from the offers.json file that is in your backend folder.
