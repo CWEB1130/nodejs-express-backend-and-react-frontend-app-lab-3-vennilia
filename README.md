@@ -30,7 +30,7 @@ This step is going to include a route that responds back with offers
         var offers = require('../offers.json');
       ```
 
-     1. Within the router.get(), alter the res.render() method to the statement below.
+     1. Within the router.get(), alter the res.send() method to the statement below.
      ```javascript
         res.json(offers)
      ```
@@ -39,7 +39,7 @@ This step is going to include a route that responds back with offers
      ```linux
         PORT=8080 npm start
      ```
-4.  Once the server is started, navigate to URL path that will trigger the users.js route to display the offers json data.  If you can see the offers.json data once you go to the route, your route is properly configured to send json data.  
+4.  Once the server is started, navigate to **URL path** that will trigger the users.js route to display the offers json data.  If you can see the offers.json data once you go to the route, your route is properly configured to send json data.  
 
 5.  After viewing the route that displays the offer json data, stop application by running **[Control + C]**
 ### Step 4 - Create a React Front-end Framework
