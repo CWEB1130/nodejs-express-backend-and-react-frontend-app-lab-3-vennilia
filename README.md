@@ -125,8 +125,7 @@ This step is going to include a route that responds back with offers
 1.  Create new functionality that would populate suggested properties component.  You will need to alter the the route within the backend folder, add a new data source and create a new component within the frontend src folder.
 
 ### STEP 9 - Github Repository
-1.  Add Instructor as a contributor to repository by searching for **[instructorc]**
-2.  Adjust README.md file at the end to include date of completion and course information.
+1.  Adjust README.md file at the end to include date of completion and course information.
 
 ### STEP 10 - Submission
 1.  Comment your name to the app.js file within the backend folder.
