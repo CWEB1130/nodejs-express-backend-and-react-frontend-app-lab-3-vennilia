@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+        <title>MPLS Renters - Renter Profile</title>
+        <meta charset="UTF-8">
+        <meta name="description" content="MPLS Renters Profile page">
+        <meta name="keywords" content="Renters Profile Page, MPLS renter profile, Apartment renter">
+        <meta name="author" content="C.Fulton">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--Internal CSS-->
+        <style>
+            html, body, div, span, object, iframe,
+            h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+            abbr, address, cite, code,
+            del, dfn, em, img, ins, kbd, q, samp,
+            small, strong, sub, sup, var,
+            b, i,
+            dl, dt, dd, ol, ul, li,
+            fieldset, form, label, legend,
+            table, caption, tbody, tfoot, thead, tr, th, td,
+            article, aside, canvas, details, figcaption, figure, 
+            footer, header, hgroup, menu, nav, section, summary,
+            time, mark, audio, video {
+
+                margin:0;
+                padding:0;
+                border:0;
+                outline:0;
+                font-size:100%;
+                vertical-align:baseline;
+                background:transparent;
+            }
+
+            body {
+                line-height:1;
+                font-family: 'Montserrat', sans-serif;
+            }
+            #profile_top_section{
+                width: 100%;
+                height: 300px;
+                background-image: url(%PUBLIC_URL%/profile_bg_crop_filter.png);
+                background-size: 100%;
+            }
+
+            #profile_grid_container{
+
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                grid-template-rows: .7fr .7fr 3fr 1fr;
+                height: 800px;
+                width: 95%;
+                margin: auto;
+            }
+
+            #profile_nav{
+                display: flex;
+                
+                grid-column-start: 1;
+                grid-column-end: -1;
+                grid-row-start: 1;
+                grid-row-end: 2;
+                
+             
+            }
+
+            #profile_nav #notification{
+                
+                flex: 1 0 135px;
+            }
+
+            #profile_nav a{
+                
+                text-decoration: none;
+                flex: 1 0 135px;
+                margin: 23px 20px;
+                text-align: center;
+                font-size: 1.7em;
+                padding-top: .5em;
+            }
+            #profile_nav a:visited{
+                color: black;
+            }
+            #profile_nav a:link{
+                color: black;
+            }
+            #profile_nav img{
+                
+                width: 24%;
+                margin: auto;
+                margin-top: .8em;
+                display: block;
+            }
+            #profile_nav #logo{
+                
+                flex: 1 0 135px;
+            }
+
+            #profile_content_header{
+                display: flex;
+                grid-column-start: 1;
+                grid-column-end: -1;
+                grid-row-start: 2;
+                grid-row-end: 3;
+                height: 100px;
+            }
+
+            #profile_content_header .profile_headers{
+                font-size: 2em;
+                flex: 1 0 300px;
+                margin: 4% 7%;
+            
+            }
+
+            #profile_content_flexcontainer{
+                display: flex;
+                flex-wrap: wrap;
+                grid-column-start: 1;
+                grid-column-end: -1;
+                grid-row-start: 3;
+                grid-row-end: 4;
+                height: 700px;
+            }
+
+            .profile_content{
+                flex: 1 0 300px;
+                height: 700px;
+            }
+
+            /**Profile top section style rules**/
+            #profile_top_section p{
+                float: right;
+                margin: 20px 60px;
+                font-size: 1.2em;
+            }
+
+            #profile_header_data{
+                width: 485px;
+                height: 200px;
+                margin: auto;
+                padding-top: 60px;
+            }
+
+            #profile_header_data img{
+                width: 30%;
+                border-radius: 80px;
+                margin: auto;
+                display: block;
+            }
+
+            #profile_header_data h2{
+                font-size: 2.8em;
+                text-align: center;
+                margin-top: .4em;
+                font-weight: 100;
+            }
+            .profile_headers{
+                font-size: 2em;
+
+            }
+            #profile_offer{
+                width: 80%;
+                height: 640px;
+                background-color: rgba(77, 238, 77, 0.678);
+                margin: 2% auto;
+            }
+
+            .aoffer{
+                box-shadow: 7px 5px 7px #aaa;
+                background-color: #eee;
+                padding: 2%;
+                margin: 3% 0%;
+                min-height: 130px;
+            }
+            .aoffer #offer_property {
+                text-transform: uppercase;
+                float: left;
+                
+            }
+            .aoffer #offer_exp{
+                text-transform: uppercase;
+                float: right;
+                color: #1A578C;
+            }
+            .aoffer #offer_details{
+                clear: both;
+                margin-top: 5%;
+            }
+            #profile_suggestions{
+                width: 80%;
+                height: 315px;
+                background-color: rgba(255, 255, 0, 0.774);
+                margin: 2% auto;
+            }
+            #profile_task{
+                width: 80%;
+                height: 315px;
+                background-color: rgba(255, 0, 0, 0.658);
+                margin: 2% auto;
+            }
+            
+        
+        </style>
+        <!--External Google font CDN link-->
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800&display=swap" rel="stylesheet">
+		
+    </head>
+    <body>
+        <div id="profile_top_section">
+            <p>Sunday May 8, 2023 11:02am</p>
+            <section id="profile_header_data">
+                <img src="%PUBLIC_URL%/headshot_crop.jpg" alt="profile image">
+                
+                <h2>Welcome Mary Jane</h2>
+            </section>
+
+        </div>
+        <!--Implementing CSS Grid-->
+        <div id="profile_grid_container">
+            <!--Grid items total of 4-->
+            <nav id="profile_nav"> <!--Profile Nav Flex container-->
+                <div id="logo">
+                    <img src="%PUBLIC_URL%/logo.png" alt="mpls renters logo">
+                </div>
+                <a href="">Favorites</a>
+                <a href="">Offer List</a>
+                <a href="">Profile Settings</a>
+                <div id="notification"><img src="" alt=""></div>
+            </nav>
+            <section id="profile_content_header">
+                <section class="profile_headers">
+                    <h3>Offers</h3>
+                </section>
+                <section class="profile_headers">
+                    <h3>Overview</h3>
+                </section>
+            </section>
+            <!--Implement flexbox-->
+            <div id="profile_content_flexcontainer">
+                <!--Flex items-->
+                <div class="profile_content offers">
+                    <div id="offers"></div>
+                </div>
+                <div class="profile_content data">
+                    <section id="profile_suggestions">
+                        <h3>Suggested Properties</h3>
+                    </section>
+                    <section id="profile_task">
+                        <h3>Task</h3>
+                    </section>
+                </div>
+            </div>
+            <div id="tb_graphic_one">
+
+            </div>
+
+        </div>
+
+    </body>
+</html>
